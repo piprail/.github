@@ -8,7 +8,7 @@
 
 **The payment layer for the agent economy.**
 
-A backendless TypeScript **SDK** for [x402](https://x402.org) payments — plus an **MCP server** that hands any AI agent a budget-bound wallet. Let any HTTP endpoint charge for itself, and any agent pay for itself, in a couple of lines.
+The open, backendless rail for [x402](https://x402.org) agent payments — a TypeScript **SDK**, an **MCP server**, and built-in **discovery**, across **28 chains in 10 families**. Let any HTTP endpoint charge for itself, let any AI agent pay for itself, and let both be found — in a couple of lines. No backend, no fee, no custody.
 
 <p>
   <a href="https://www.npmjs.com/package/@piprail/sdk"><img src="https://img.shields.io/npm/v/@piprail/sdk?style=flat-square&color=cb3837&label=%40piprail%2Fsdk" alt="@piprail/sdk npm version"></a>
@@ -31,6 +31,12 @@ PipRail implements the open **402 Payment Required** standard for HTTP and agent
 
 It's a library you `npm install` — not a hosted service you sign up for.
 
+**One package, the complete x402 stack — accept, pay, _and_ discover:**
+
+| 💸 Accept | 🤖 Pay | 🧭 Discover |
+| --- | --- | --- |
+| Gate any route so it charges for itself — `requirePayment` / `createPaymentGate`. Paid straight to your wallet. | Hand an agent a budget-bound wallet — `PipRailClient` or the MCP server. It pays 402s on its own, capped by a policy it can't exceed. | Emit a manifest, register on the open indexes, and find payable APIs — `register` / `discover`. $0, no hosted registry. |
+
 - 🔌 **One parameter picks everything** — name a `chain`, add a wallet, get paid.
 - 🤖 **Give your agent a wallet** — [`@piprail/mcp`](https://piprail.com/mcp) lets Claude, Cursor & any MCP client pay x402 URLs on their own, capped by a spend policy the model can't exceed.
 - 🧭 **Discoverable** — emit a machine-readable manifest, [register](https://piprail.com/discovery) on the open x402 indexes (402 Index, CDP Bazaar), and let agents find and pay your endpoint. PipRail hosts no registry of its own.
@@ -39,6 +45,8 @@ It's a library you `npm install` — not a hosted service you sign up for.
 - 🔋 **Affordability-aware** — `planPayment()` checks balance, gas, and recipient-readiness before an agent pays.
 - 📦 **Pure TypeScript** — runs headless or in the browser; `viem` peer dep, non-EVM libs lazy-loaded.
 - ⚖️ **MIT licensed** — use it, fork it, ship it.
+
+> **The missing piece for the agent economy:** an open, self-custodial payment rail any endpoint or agent can use in minutes — not a platform, not a toll booth. Live on mainnet across every family, listed in the [MCP registry](https://registry.modelcontextprotocol.io), MIT, **$0**.
 
 ---
 
@@ -64,7 +72,7 @@ const client = new PipRailClient({ chain: 'base', wallet: { privateKey: process.
 const res = await client.get('https://api.example.com/report')
 ```
 
-Or skip the code entirely — drop the **MCP server** into any agent and it pays x402 URLs itself, budget-bound. Add one block to your MCP client config:
+Or skip the code entirely — drop the **MCP server** into any agent and it pays, discovers, and registers x402 URLs itself, budget-bound. Add one block to your MCP client config:
 
 ```jsonc
 // Claude Desktop · Cursor · Claude Code · Windsurf · VS Code · Cline
