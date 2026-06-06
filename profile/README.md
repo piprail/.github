@@ -16,9 +16,10 @@ A backendless TypeScript **SDK** for [x402](https://x402.org) payments — plus 
   <a href="https://www.npmjs.com/package/@piprail/sdk"><img src="https://img.shields.io/npm/types/@piprail/sdk?style=flat-square&color=3178c6" alt="TypeScript types"></a>
   <a href="https://github.com/piprail/piprail/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-2ee6a6?style=flat-square" alt="MIT License"></a>
   <a href="https://x402.org"><img src="https://img.shields.io/badge/x402-v2-6e56cf?style=flat-square" alt="x402 v2"></a>
+  <a href="https://registry.modelcontextprotocol.io"><img src="https://img.shields.io/badge/MCP_registry-io.github.piprail%2Fmcp-2ee6a6?style=flat-square" alt="Listed in the MCP registry"></a>
 </p>
 
-<strong><a href="https://www.npmjs.com/package/@piprail/sdk">Get started →</a></strong> &nbsp;·&nbsp; <a href="https://piprail.com">Website</a> &nbsp;·&nbsp; <a href="https://piprail.com/demo">Live demo</a> &nbsp;·&nbsp; <a href="https://piprail.com/mcp">MCP server</a> &nbsp;·&nbsp; <a href="https://github.com/piprail/piprail/blob/main/sdk/README.md">Docs</a>
+<strong><a href="https://www.npmjs.com/package/@piprail/sdk">Get started →</a></strong> &nbsp;·&nbsp; <a href="https://piprail.com">Website</a> &nbsp;·&nbsp; <a href="https://piprail.com/demo">Live demo</a> &nbsp;·&nbsp; <a href="https://piprail.com/mcp">MCP server</a> &nbsp;·&nbsp; <a href="https://piprail.com/discovery">Discovery</a> &nbsp;·&nbsp; <a href="https://github.com/piprail/piprail/blob/main/sdk/README.md">Docs</a>
 
 </div>
 
@@ -32,6 +33,7 @@ It's a library you `npm install` — not a hosted service you sign up for.
 
 - 🔌 **One parameter picks everything** — name a `chain`, add a wallet, get paid.
 - 🤖 **Give your agent a wallet** — [`@piprail/mcp`](https://piprail.com/mcp) lets Claude, Cursor & any MCP client pay x402 URLs on their own, capped by a spend policy the model can't exceed.
+- 🧭 **Discoverable** — emit a machine-readable manifest, [register](https://piprail.com/discovery) on the open x402 indexes (402 Index, CDP Bazaar), and let agents find and pay your endpoint. PipRail hosts no registry of its own.
 - 🏷️ **No facilitator, no fee** — funds go wallet-to-wallet; you keep 100%.
 - 🔒 **Verified locally** — on-chain checks run against your own RPC; nothing leaves your process.
 - 🔋 **Affordability-aware** — `planPayment()` checks balance, gas, and recipient-readiness before an agent pays.
@@ -133,7 +135,7 @@ Any other EVM chain works by passing a viem `Chain` or `{ id, rpcUrl }` — the 
 | Package | What it is |
 | --- | --- |
 | [**@piprail/sdk**](https://www.npmjs.com/package/@piprail/sdk) | The core SDK — take or make x402 payments across 28 chains, in a couple of lines. |
-| [**@piprail/mcp**](https://www.npmjs.com/package/@piprail/mcp) | An [MCP](https://modelcontextprotocol.io) server — give any AI agent a budget-bound wallet to pay x402 URLs autonomously. `npx -y @piprail/mcp` |
+| [**@piprail/mcp**](https://www.npmjs.com/package/@piprail/mcp) | An [MCP](https://modelcontextprotocol.io) server — give any AI agent a budget-bound wallet to pay, discover & register x402 URLs autonomously. Listed in the [MCP registry](https://registry.modelcontextprotocol.io) as `io.github.piprail/mcp`. `npx -y @piprail/mcp` |
 
 ## Repositories
 
