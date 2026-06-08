@@ -8,7 +8,7 @@
 
 **The payment layer for the agent economy.**
 
-The open, backendless rail for [x402](https://x402.org) agent payments — a TypeScript **SDK**, an **MCP server**, and built-in **discovery**, across **28 chains in 10 families**. Let any HTTP endpoint charge for itself, let any AI agent pay for itself, and let both be found — in a couple of lines. No backend, no fee, no custody.
+The open, backendless rail for [x402](https://x402.org) agent payments — a TypeScript **SDK**, an **MCP server**, and built-in **discovery**, across **29 chains in 10 families**. Let any HTTP endpoint charge for itself, let any AI agent pay for itself, and let both be found — in a couple of lines. No backend, no fee, no custody.
 
 <p>
   <a href="https://www.npmjs.com/package/@piprail/sdk"><img src="https://img.shields.io/npm/v/@piprail/sdk?style=flat-square&color=cb3837&label=%40piprail%2Fsdk" alt="@piprail/sdk npm version"></a>
@@ -87,7 +87,7 @@ Or skip the code entirely — drop the **MCP server** into any agent and it pays
 
 ## Supported chains
 
-One protocol, every major chain — **28 chains across 10 driver families** (19 EVM mainnets plus Solana, TON, Tron, NEAR, Sui, Aptos, Algorand, Stellar, and XRPL). USDC nearly everywhere, USDT on most, native gas coins too.
+One protocol, every major chain — **29 chains across 10 driver families** (20 EVM mainnets plus Solana, TON, Tron, NEAR, Sui, Aptos, Algorand, Stellar, and XRPL). USDC nearly everywhere, USDT on most, native gas coins too.
 <!-- Update count when adding a chain/family. Full, always-current list: sdk/README.md -->
 
 <div align="center">
@@ -100,6 +100,7 @@ One protocol, every major chain — **28 chains across 10 driver families** (19 
   <td align="center"><img src="https://piprail.com/chains/polygon.svg" alt="Polygon" width="44" height="44"></td>
   <td align="center"><img src="https://piprail.com/chains/bnb.svg" alt="BNB Chain" width="44" height="44"></td>
   <td align="center"><img src="https://piprail.com/chains/avalanche.svg" alt="Avalanche" width="44" height="44"></td>
+  <td align="center"><img src="https://piprail.com/chains/kaia.svg" alt="Kaia" width="44" height="44"></td>
 </tr>
 <tr>
   <td align="center"><img src="https://piprail.com/chains/mantle.svg" alt="Mantle" width="44" height="44"></td>
@@ -142,7 +143,7 @@ Any other EVM chain works by passing a viem `Chain` or `{ id, rpcUrl }` — the 
 
 | Package | What it is |
 | --- | --- |
-| [**@piprail/sdk**](https://www.npmjs.com/package/@piprail/sdk) | The core SDK — take or make x402 payments across 28 chains, in a couple of lines. |
+| [**@piprail/sdk**](https://www.npmjs.com/package/@piprail/sdk) | The core SDK — take or make x402 payments across 29 chains, in a couple of lines. |
 | [**@piprail/mcp**](https://www.npmjs.com/package/@piprail/mcp) | An [MCP](https://modelcontextprotocol.io) server — give any AI agent a budget-bound wallet to pay, discover & register x402 URLs autonomously. Listed in the [MCP registry](https://registry.modelcontextprotocol.io) as `io.github.piprail/mcp`. `npx -y @piprail/mcp` |
 
 ## Repositories
