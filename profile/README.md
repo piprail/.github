@@ -25,6 +25,18 @@ The open, backendless rail for [x402](https://x402.org) agent payments — a Typ
 
 ---
 
+## How a payment moves
+
+<div align="center">
+
+<img src="https://piprail.com/flow.png" alt="How a payment moves — the full life of one payment, side by side. Left, the traditional MPP path (Stripe + Tempo): the agent's money is held in transit through a processor and a permissioned chain across roughly five hops, takes ~T+2 days to become spendable, and can be frozen or reversed. Right, PipRail's x402 wallet-to-wallet rail: the agent pays the merchant's wallet directly in a single on-chain transaction, the merchant gate verifies it locally, funds are spendable in seconds, there's no custodian, and the fee is 0%." width="900">
+
+<sub><strong>The middle is the difference.</strong> A traditional processor holds the money in transit, takes days to release it, and can freeze or reverse it. PipRail removes the middle entirely — the agent pays the merchant's wallet directly, the merchant verifies it locally against their own RPC, and it settles in one transaction at <strong>0% fee</strong>, self-custodial end to end. &nbsp;<a href="https://piprail.com">See it on piprail.com →</a></sub>
+
+</div>
+
+---
+
 ## What is PipRail?
 
 PipRail implements the open **402 Payment Required** standard for HTTP and agent payments. There is no backend, no database, no account, no dashboard, and no protocol fee. Payments settle straight into your own wallet, verified locally against your own RPC.
